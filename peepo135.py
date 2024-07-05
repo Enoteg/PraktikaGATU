@@ -17,7 +17,7 @@ def main():
         except ValueError:
             print("Неверный ввод. Пожалуйста, введите целое число.")
 
-main()
+
 
 
 
