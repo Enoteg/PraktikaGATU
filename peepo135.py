@@ -1,21 +1,22 @@
-def factorial(n):
-    """Функция для нахождения факториала числа."""
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
+# Функция для вывода таблицы умножения
+def print_multiplication_table():
+    # Заголовок таблицы
+    print("    ", end="")
+    for i in range(1, 11):
+        print(f"{i:4}", end="")
+    print("\n" + "-" * 45)
 
-def main():
-    while True:
-        try:
-            num = int(input("Введите число для нахождения его факториала: "))
-            if num < 0:
-                print("Пожалуйста, введите неотрицательное число.")
-            else:
-                print(f"Факториал числа {num} равен {factorial(num)}")
-                break
-        except ValueError:
-            print("Неверный ввод. Пожалуйста, введите целое число.")
+    # Тело таблицы
+    for i in range(1, 11):
+        # Вывод строки с номерами
+        print(f"{i:2} |", end="")
+        for j in range(1, 11):
+            print(f"{i*j:4}", end="")
+        print()
+
+# Вызов функции для вывода таблицы умножения
+print_multiplication_table()
+
 
 
 
